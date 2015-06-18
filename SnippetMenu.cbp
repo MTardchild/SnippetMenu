@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SnippetMenu" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/SnippetMenu" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/SnippetMenu" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="ArraySort.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ArraySort.h" />
+		<Unit filename="ArrayUtility.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ArrayUtility.h" />
+		<Unit filename="Interface.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Interface.h" />
+		<Unit filename="LinkedList.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="LinkedList.h" />
+		<Unit filename="Miscellaneous.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Miscellaneous.h" />
+		<Unit filename="Utility.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Utility.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

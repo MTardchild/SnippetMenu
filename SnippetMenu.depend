@@ -1,0 +1,154 @@
+# depslib dependency file v1.0
+1432471385 source:c:\users\marius\documents\cprogs\snippetmenu\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"main.h"
+	"list.h"
+	"arrays.h"
+	"changevalues.h"
+	"sortarray.h"
+
+1432056441 c:\users\marius\documents\cprogs\snippetmenu\main.h
+
+1431883857 source:c:\users\marius\documents\cprogs\snippetmenu\list.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"main.h"
+
+1431883739 source:c:\users\marius\documents\cprogs\snippetmenu\changevalues.c
+
+1431883740 source:c:\users\marius\documents\cprogs\snippetmenu\printpointer.c
+
+1431884627 c:\users\marius\documents\cprogs\snippetmenu\list.h
+
+1432159179 c:\users\marius\documents\cprogs\snippetmenu\arrays.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1432159212 source:c:\users\marius\documents\cprogs\snippetmenu\arrays.c
+	"arrays.h"
+	"main.h"
+	"sortarray.h"
+	"changevalues.h"
+
+1432054471 c:\users\marius\documents\cprogs\snippetmenu\extlibs\pcg_basic.h
+	<inttypes.h>
+
+1432054471 source:c:\users\marius\documents\cprogs\snippetmenu\extlibs\pcg_basic.c
+	"pcg_basic.h"
+
+1432471309 source:c:\users\marius\documents\cprogs\snippetmenu\sortarray.c
+	"changevalues.h"
+	"sortarray.h"
+	"arrays.h"
+
+1432470390 c:\users\marius\documents\cprogs\snippetmenu\sortarray.h
+	<stdio.h>
+	<stdlib.h>
+
+1432056404 c:\users\marius\documents\cprogs\snippetmenu\changevalues.h
+
+1432798883 source:c:\users\tuschl\documents\github\snippetmenud\changevalues.c
+	<stdint.h>
+
+1432796633 source:c:\users\tuschl\documents\github\snippetmenud\list.c
+	"list.h"
+
+1432802759 c:\users\tuschl\documents\github\snippetmenud\main.h
+
+1432806015 source:c:\users\tuschl\documents\github\snippetmenud\main.c
+	<stdio.h>
+	<stdbool.h>
+	"LinkedList.h"
+	"ArrayUtility.h"
+	"ArraySort.h"
+	"Interface.h"
+	"Miscellaneous.h"
+
+1432802736 c:\users\tuschl\documents\github\snippetmenud\list.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<stdint.h>
+
+1432802710 c:\users\tuschl\documents\github\snippetmenud\arrays.h
+
+1432800847 c:\users\tuschl\documents\github\snippetmenud\changevalues.h
+
+1432802811 c:\users\tuschl\documents\github\snippetmenud\sortarray.h
+
+1432800476 source:c:\users\tuschl\documents\github\snippetmenud\printpointer.c
+
+1432803250 source:c:\users\tuschl\documents\github\snippetmenud\sortarray.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<math.h>
+	"arrays.h"
+	"Utility.h"
+	"sortarray.h"
+
+1432804310 source:c:\users\tuschl\documents\github\snippetmenud\arrays.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<stdint.h>
+	"main.h"
+	"ArraySort.h"
+	"Utility.h"
+	"arrays.h"
+
+1432802146 source:c:\users\tuschl\documents\github\snippetmenud\interface.c
+	<stdio.h>
+	<stdint.h>
+	"Utility.h"
+	"Interface.h"
+
+1432799966 source:c:\users\tuschl\documents\github\snippetmenud\utility.c
+	<stdint.h>
+
+1432801649 source:c:\users\tuschl\documents\github\snippetmenud\miscellaneous.c
+	<stdio.h>
+
+1432801696 c:\users\tuschl\documents\github\snippetmenud\utility.h
+
+1432802693 c:\users\tuschl\documents\github\snippetmenud\interface.h
+
+1432804004 source:c:\users\tuschl\documents\github\snippetmenud\linkedlist.c
+	"LinkedList.h"
+
+1432802736 c:\users\tuschl\documents\github\snippetmenud\linkedlist.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<stdint.h>
+
+1432802774 c:\users\tuschl\documents\github\snippetmenud\miscellaneous.h
+
+1433257076 c:\users\tuschl\documents\github\snippetmenud\arraysort.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<math.h>
+
+1434617625 source:c:\users\tuschl\documents\github\snippetmenud\arraysort.c
+	"ArraySort.h"
+	"Utility.h"
+	"ArrayUtility.h"
+
+1432895865 c:\users\tuschl\documents\github\snippetmenud\arrayutility.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<stdint.h>
+	<stdbool.h>
+
+1434609282 source:c:\users\tuschl\documents\github\snippetmenud\arrayutility.c
+	"main.h"
+	"ArraySort.h"
+	"Utility.h"
+	"ArrayUtility.h"
+

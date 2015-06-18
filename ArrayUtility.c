@@ -3,10 +3,12 @@
 #include "Utility.h"
 #include "ArrayUtility.h"
 
-///////////////////////////////////
-//      Length gets always stored
-//      at index 0
-///////////////////////////////////
+//////////////////////////////////////////////
+//  Self-Reminder:                          //
+//  Length is always stored at index 0      //
+//  If you want to iterate over an array    //
+//  start at 1 and end at *array+1          //
+//////////////////////////////////////////////
 
 /// <summary>Interface for user to sort an array</summary>
 void ArraySortIO() {

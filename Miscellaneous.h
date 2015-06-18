@@ -1,6 +1,12 @@
 #ifndef HEADER_MISC
-#define HEADER_MISC
+    #define HEADER_MISC
 
-void PrintPointer();
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <stdint.h>
+    #include "Utility.h"
 
-#endif
+    void PrintPointer();
+    int32_t ComputePascal(int32_t, int32_t);
+    void ComputePascalIO();
+#endif // HEADER_MISC

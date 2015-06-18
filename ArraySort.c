@@ -5,6 +5,7 @@
 // Constants
 // Bucket Sort
 int32_t CONST_MIN_INT = -2147483647; // Marker for already checked spots
+int32_t CONST_MAX_INT = 2147483647; // Marker for already checked spots
 int32_t CONST_BUCKETS; // Number of buckets, declared by user input
 int32_t CONST_MAX_VALUE; // Highest value in given array
 int32_t CONST_MIN_VALUE; // Lowest value in given array
@@ -67,6 +68,10 @@ intptr_t* MergeSortMin (int32_t *array) {
     return MergeSortMerge(arrayLeft, arrayRight);
 }
 
+/// <summary>Merges the left and right array</summary>
+/// <summary>Always merges the lower number first</summary>
+/// <parameter name="array">Array to get merged</parameter>
+/// <returns>Merged Array</returns>
 intptr_t* MergeSortMerge (int32_t *arrayLeft, int32_t *arrayRight) {
     intptr_t *arrayMerged = ArrayCreateByLength(*arrayLeft + *arrayRight, false);
     *arrayMerged = *arrayLeft + *arrayRight;

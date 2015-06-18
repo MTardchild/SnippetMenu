@@ -8,16 +8,29 @@
 #include "Miscellaneous.h"
 
 int ListenToInput() {
-    int input;
     bool exit;
-    scanf("%d", &input);
+    char *input = malloc(sizeof(char)*4);
+    int32_t inputChoice;
 
-    switch(input) {
+    if (fgets(input, 3, stdin) == NULL) {
+        printf("Invalid input.");
+        return 0;
+    }
+
+    if (ConvertStringToInt(input, 4) != NULL) {
+        inputChoice = *ConvertStringToInt(input, 4);
+    } else {
+        printf("Invalid input.");
+        return 0;
+    }
+
+    switch(inputChoice) {
         case 1: ArraySwapValues(); break;
         case 2: PrintPointer(); break;
         case 3: ChangeValuesInterface(); break;
         case 4: SimpleLinkedList(); break;
         case 5: ArraySortIO(); break;
+        case 6: ComputePascalIO(); break;
         case 0: exit = true; break;
         default: printf("Invalid input.");
     }
@@ -28,7 +41,7 @@ int main()
 {
     while (true) {
         printf("\nNavigation\n");
-        printf("01: Array Swap\n02: Print Pointer\n03: Change Values\n04: Simple Linked List\n05: Array Sorter\n00: Exit\n\n");
+        printf("01: Array Swap\n02: Print Pointer\n03: Change Values\n04: Simple Linked List\n05: Array Sorter\n06: Pascal Triangle\n00: Exit\n\n");
         if (ListenToInput() == 1) return 0;
     }
     return 0;

@@ -12,22 +12,26 @@
 
 /// <summary>Interface for user to sort an array</summary>
 void ArraySortIO() {
-    intptr_t *arrayInt = ArrayCreateByInput(true);
+    intptr_t *arrayInt = ArrayCreateByInput(true), *inputValue;
     intptr_t *arrayIntSorted = ArrayCreateByLength(*arrayInt, false);
     arrayIntSorted = ArrayCopy(arrayInt);
-    int32_t input;
 
     printf("\nNavigation\n");
     printf("01: Quick Sort (ASAP)\n02: Selection Sort (Ascending)\n03: Selection Sort (Descending)\n04: Merge Sort (Ascending)\n05: Bucket Sort(Descending)\n00: Exit\n\n");
-    scanf("%d", &input);
+
+    inputValue = GetInput();
+    if (inputValue == NULL) {
+        printf("Invalid input.");
+        return;
+    }
 
     printf("\n--- Generated Array ---\n");
     ArrayPrint(arrayInt);
     printf("\n");
-
     clock_t start, finish;
     start = clock();
-    switch(input) {
+
+    switch(*inputValue) {
         case 2: arrayIntSorted = SelectionSortMin(arrayInt); break;
         case 3: arrayIntSorted = SelectionSortMax(arrayInt); break;
         case 4: arrayIntSorted = MergeSortMin(arrayInt); break;
@@ -35,30 +39,40 @@ void ArraySortIO() {
         case 0: return; break;
         default: printf("\nWrong Input"); break;
     }
-    finish = clock();
 
+    finish = clock();
     printf("\n--- Sorted Array ---\n");
     ArrayPrint(arrayIntSorted);
-
     printf("\nTime for sort (seconds): %lf", (double)(finish-start)/CLOCKS_PER_SEC);
 }
 
 /// <summary>Swaps two values chosen by user in a random array</summary>
 void ArraySwapValues() {
     printf("--- Array Swap ---\n");
-    intptr_t *intArray = ArrayCreateByInput(true);
+    intptr_t *intArray = ArrayCreateByInput(true), *inputValue;
     int32_t firstIndex, secondIndex;
 
     ArrayPrint(intArray);
 
     printf("\nIndices to swap: \n");
     printf("First Index: ");
-    scanf("%d", &firstIndex);
+
+    inputValue = GetInput();
+    if (inputValue == NULL) {
+        printf("Invalid input.");
+        return;
+    }
+
+    firstIndex = *inputValue;
     printf("Second Index: ");
-    scanf("%d", &secondIndex);
+    inputValue = GetInput();
+    if (inputValue == NULL) {
+        printf("Invalid input.");
+        return;
+    }
 
+    secondIndex = *inputValue;
     ChangeValues(intArray+firstIndex, intArray+secondIndex);
-
     ArrayPrint(intArray);
 }
 
@@ -106,16 +120,27 @@ intptr_t* ArrayCopyByIndex (intptr_t *array, int32_t indexStart, int32_t indexEn
 /// <returns>New Array</returns>
 intptr_t* ArrayCreateByInput(bool randomNumbers) {
     int32_t i, range, size;
+    intptr_t *inputValue;
 
     printf("Enter array size: ");
-    scanf("%d", &size);
+    inputValue = GetInput();
+    if (inputValue == NULL) {
+        printf("Invalid input.");
+        return NULL;
+    }
+    size = *inputValue;
 
     intptr_t *arrayInt = malloc(sizeof(int32_t)*(size+1));
     *arrayInt = size;
 
     if (randomNumbers) {
         printf("Range from 0 to: ");
-        scanf("%d", &range);
+        inputValue = GetInput();
+        if (inputValue == NULL) {
+            printf("Invalid input.");
+            return NULL;
+        }
+        range = *inputValue;
 
         for (i = 1; i < size+1; i++) {
             *(arrayInt+i) = GetRandomNumber(range);
@@ -130,12 +155,17 @@ intptr_t* ArrayCreateByInput(bool randomNumbers) {
 /// <returns>New Array</returns>
 intptr_t* ArrayCreateByLength(int32_t arrayLength, bool randomNumbers) {
     int32_t i, range;
-    intptr_t *arrayInt = malloc(sizeof(int32_t)*(arrayLength+1));
+    intptr_t *arrayInt = malloc(sizeof(int32_t)*(arrayLength+1)), *inputValue;
     *arrayInt = arrayLength;
 
     if (randomNumbers) {
         printf("Range from 0 to: ");
-        scanf("%d", &range);
+        inputValue = GetInput();
+        if (inputValue == NULL) {
+            printf("Invalid input.");
+            return NULL;
+        }
+        range = *inputValue;
 
         for (i = 1; i < arrayLength+1; i++) {
             *(arrayInt+i) = GetRandomNumber(range);

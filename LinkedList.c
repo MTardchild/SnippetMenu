@@ -13,8 +13,21 @@ void ListPrint (SimpleList *head) {
 
 int32_t ListGetValue() {
     int32_t value;
+    char *input = malloc(sizeof(char)*6);
+
     printf("Enter value to Push: ");
-    scanf("%d", &value);
+    if (fgets(input, 5, stdin) == NULL) {
+        printf("Invalid input.");
+        return 0;
+    }
+
+    if (ConvertStringToInt(input, 6) != NULL) {
+        value = *ConvertStringToInt(input, 6);
+    } else {
+        printf("Invalid input.");
+        return 0;
+    }
+
     return value;
 }
 
@@ -93,11 +106,19 @@ void ListPopAtIndex (SimpleList **head) {
     free(NextItem);
 }
 
+
 int32_t ListGetIndex() {
-    int32_t index;
+    intptr_t *inputValue;
+
     printf("Enter index, where to push:");
-    scanf("%d", &index);
-    return index;
+
+    inputValue = GetInput();
+    if (inputValue == NULL) {
+        printf("Invalid input.");
+        return -1;
+    }
+
+    return *inputValue;
 }
 
 void ListPushAtIndex (SimpleList **head) {
@@ -166,11 +187,23 @@ void ListPopFirstItemWithValue (SimpleList **headPoint, SimpleList *head) {
 }
 
 int32_t ListenToInputList(SimpleList *rootNode) {
-    int32_t input;
     bool exit;
-    scanf("%d", &input);
+    char *input = malloc(sizeof(char)*6);
+    int32_t inputChoice;
 
-    switch(input) {
+    if (fgets(input, 5, stdin) == NULL) {
+        printf("Invalid input.");
+        return 0;
+    }
+
+    if (ConvertStringToInt(input, 6) != NULL) {
+        inputChoice = *ConvertStringToInt(input, 6);
+    } else {
+        printf("Invalid input.");
+        return 0;
+    }
+
+    switch(inputChoice) {
         case 1: ListPrint(rootNode); break;
         case 2: ListPushStart(&rootNode); break;
         case 3: ListPushEnd(rootNode); break;

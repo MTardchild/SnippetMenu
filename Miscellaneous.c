@@ -22,38 +22,27 @@ int32_t ComputePascal(int32_t row, int32_t column) {
 
 /// <summary>Handles user input for pascal</summary>
 void ComputePascalIO() {
-    char *input = malloc(sizeof(char)*10);
     int32_t row, column;
+    intptr_t *inputValue;
 
-    fflush(stdin);
     printf("\nPascal Triangle\n");
     printf("Indices starting at 0\n");
 
     printf("Enter the row: ");
-    if (fgets(input, 5, stdin) == NULL) {
-        printf("Error: Invalid Input.");
+    inputValue = GetInput();
+    if (inputValue == NULL) {
+        printf("Error");
         return;
     }
-
-    if (ConvertStringToInt(input, 3) != NULL) {
-        row = *ConvertStringToInt(input, 3);
-    } else {
-        printf("Error row");
-        return;
-    }
+    row = *inputValue;
 
     printf("\nEnter the column: ");
-    if (fgets(input, 3, stdin) == NULL) {
-        printf("Error: Invalid Input.");
+    inputValue = GetInput();
+    if (inputValue == NULL) {
+        printf("Error");
         return;
     }
-
-    if (ConvertStringToInt(input, 3) != NULL) {
-        column = *ConvertStringToInt(input, 3);
-    } else {
-        printf("Error column");
-        return;
-    }
+    column = *inputValue;
 
     printf("\nValue at [%d/%d] = %d", row, column, ComputePascal(row, column));
 }

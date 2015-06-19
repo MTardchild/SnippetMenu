@@ -102,8 +102,17 @@ intptr_t* MergeSortMerge (int32_t *arrayLeft, int32_t *arrayRight) {
 /// <parameter name="array">Array to get sorted</parameter>
 /// <returns>Sorted Array</returns>
 intptr_t* BucketSortIO (intptr_t* array) {
+    intptr_t *inputValue;
+
     printf("Number of Buckets: ");
-    scanf("%d", &CONST_BUCKETS);
+
+    inputValue = GetInput();
+    if (inputValue == NULL) {
+        printf("Invalid input.");
+        return NULL;
+    }
+    CONST_BUCKETS = *inputValue;
+
     BucketSort(array);
     return array;
 }

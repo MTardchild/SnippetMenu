@@ -6,25 +6,19 @@
 #include "ArraySort.h"
 #include "Interface.h"
 #include "Miscellaneous.h"
+#include "Utility.h"
 
 int ListenToInput() {
     bool exit;
-    char *input = malloc(sizeof(char)*4);
-    int32_t inputChoice;
+    intptr_t *inputValue;
 
-    if (fgets(input, 3, stdin) == NULL) {
+    inputValue = GetInput();
+    if (inputValue == NULL) {
         printf("Invalid input.");
         return 0;
     }
 
-    if (ConvertStringToInt(input, 4) != NULL) {
-        inputChoice = *ConvertStringToInt(input, 4);
-    } else {
-        printf("Invalid input.");
-        return 0;
-    }
-
-    switch(inputChoice) {
+    switch(*inputValue) {
         case 1: ArraySwapValues(); break;
         case 2: PrintPointer(); break;
         case 3: ChangeValuesInterface(); break;

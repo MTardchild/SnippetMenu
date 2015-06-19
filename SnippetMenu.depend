@@ -59,7 +59,7 @@
 
 1432802759 c:\users\tuschl\documents\github\snippetmenud\main.h
 
-1434635995 source:c:\users\tuschl\documents\github\snippetmenud\main.c
+1434702475 source:c:\users\tuschl\documents\github\snippetmenud\main.c
 	<stdio.h>
 	<stdbool.h>
 	"LinkedList.h"
@@ -67,6 +67,7 @@
 	"ArraySort.h"
 	"Interface.h"
 	"Miscellaneous.h"
+	"Utility.h"
 
 1432802736 c:\users\tuschl\documents\github\snippetmenud\list.h
 	<stdio.h>
@@ -101,32 +102,34 @@
 	"Utility.h"
 	"arrays.h"
 
-1432802146 source:c:\users\tuschl\documents\github\snippetmenud\interface.c
+1434706766 source:c:\users\tuschl\documents\github\snippetmenud\interface.c
 	<stdio.h>
 	<stdint.h>
 	"Utility.h"
 	"Interface.h"
 
-1434635569 source:c:\users\tuschl\documents\github\snippetmenud\utility.c
+1434701926 source:c:\users\tuschl\documents\github\snippetmenud\utility.c
 	"Utility.h"
 
-1434635479 source:c:\users\tuschl\documents\github\snippetmenud\miscellaneous.c
+1434702016 source:c:\users\tuschl\documents\github\snippetmenud\miscellaneous.c
 	"Miscellaneous.h"
 
-1434626976 c:\users\tuschl\documents\github\snippetmenud\utility.h
+1434701987 c:\users\tuschl\documents\github\snippetmenud\utility.h
+	<stdio.h>
 	<stdint.h>
 	<stdlib.h>
 
 1432802693 c:\users\tuschl\documents\github\snippetmenud\interface.h
 
-1432804004 source:c:\users\tuschl\documents\github\snippetmenud\linkedlist.c
+1434705139 source:c:\users\tuschl\documents\github\snippetmenud\linkedlist.c
 	"LinkedList.h"
 
-1432802736 c:\users\tuschl\documents\github\snippetmenud\linkedlist.h
+1434698416 c:\users\tuschl\documents\github\snippetmenud\linkedlist.h
 	<stdio.h>
 	<stdlib.h>
 	<stdbool.h>
 	<stdint.h>
+	"Utility.h"
 
 1434626977 c:\users\tuschl\documents\github\snippetmenud\miscellaneous.h
 	<stdio.h>
@@ -140,7 +143,7 @@
 	<stdint.h>
 	<math.h>
 
-1434618406 source:c:\users\tuschl\documents\github\snippetmenud\arraysort.c
+1434705054 source:c:\users\tuschl\documents\github\snippetmenud\arraysort.c
 	"ArraySort.h"
 	"Utility.h"
 	"ArrayUtility.h"
@@ -152,7 +155,7 @@
 	<stdint.h>
 	<stdbool.h>
 
-1434622713 source:c:\users\tuschl\documents\github\snippetmenud\arrayutility.c
+1434704662 source:c:\users\tuschl\documents\github\snippetmenud\arrayutility.c
 	"main.h"
 	"ArraySort.h"
 	"Utility.h"

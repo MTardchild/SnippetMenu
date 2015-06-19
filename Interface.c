@@ -6,11 +6,23 @@
 
 void ChangeValuesInterface() {
     int32_t valueA, valueB;
+    intptr_t *inputValue;
 
     printf("Enter first value: ");
-    scanf("%d", &valueA);
+    inputValue = GetInput();
+    if (inputValue == NULL) {
+        printf("Error");
+        return;
+    }
+    valueA = *inputValue;
+
     printf("Enter second value: ");
-    scanf("%d", &valueB);
+    inputValue = GetInput();
+    if (inputValue == NULL) {
+        printf("Error");
+        return;
+    }
+    valueB = *inputValue;
 
     printf("\n--- Change Values ---\n");
     printf("Values before: valueA: %d / valueB: %d\n", valueA, valueB);
